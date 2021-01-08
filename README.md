@@ -20,7 +20,6 @@ Mais informações sobre a API pode ser encontrada em: https://cloud.google.com/
 
 
 # Observação 
-### Este projeto está hospedado em -> https://netobatista.github.io/Vision-IA/
 
 * Está estruturado para receber os dados de forma que a *API VISION* apresente o *type* como *LABEL_DETECTION*. Caso o *type* seja alterado a estrutura do projeto deve ser atualizada *
 * O termo *maxResults* pode ser alterado para informar o máximo de descrições que podem ser retornadas da API
