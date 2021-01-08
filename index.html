@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Photo Analysis</title>
+</head>
+<body style="padding-top: 30px; padding-left: 30px;">
+    <div>
+        <input type="button"
+               value="Choose a picture" 
+               for="chooseFile" 
+               class="btn"
+               onclick="content.function.getPictureFromDisk()""
+               id="buttonChoosePicture">
+        </input>
+
+        <input id="chooseFile" 
+               style="visibility:hidden; width: 1px;" 
+               type="file"
+               onchange="content.function.showPictureSelectedFromDisk()">
+
+        <input type="button" 
+               value="Take a picture" 
+               id="takePicture"
+               onclick="content.function.initializeWebCam()"> 
+
+        <input type="button" 
+               value="cancel" 
+               hidden="true"
+               id="cancelPictureFromWebCam"
+               onclick="content.function.cancelPictureFromWebCam()">  
+
+       <input type="button" 
+              value="Analyze"
+              id='analyze'
+              onclick="content.function.analyze()">      
+    </div>
+
+    <div style="padding-top: 50px; display: inline-flex;">
+            <img id="targetImage" height="400px" width="400px"/>
+            <div id="divTable">
+
+            </div>
+            <video id="targetVideo" autoplay="true" height="400px" width="400px"></video>
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="scripts/component.js"></script>
+<script type="text/javascript" src="scripts/picture.js"></script>
+<script type="text/javascript" src="scripts/vision.js"></script>
+<script type="text/javascript" src="scripts/content.js"></script>
+<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
